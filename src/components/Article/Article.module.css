@@ -1,0 +1,15 @@
+.section {
+    max-width: 900px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    margin: auto;
+    width: fit-content;
+
+}

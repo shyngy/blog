@@ -1,13 +1,59 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+* {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background-color: rgba(235, 238, 243, 1);
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    color: black;
+    transition: none;
+}
+a:hover{
+    color: black;
+}
+
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.button{
+    width: 320px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    margin-top: 4px;
+    color: white;
+    background: #1890FF;
+    border-radius: 4px;
+}
+
+.button[name="send"]{
+    width: 300px;
+    margin-top: 14px;
+}
+
+.info-box {
+    user-select: none;
+    position: absolute;
+    right: 0;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
 }

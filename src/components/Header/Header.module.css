@@ -1,0 +1,66 @@
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding: 25px;
+}
+
+.header h3{
+    font-size: 18px;
+    margin: 0;
+    padding: 0
+}
+
+.authSection{
+    display: flex;
+    gap: 10px;
+}
+
+.authSection button, .logout {
+    padding: 10px 15px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.authSection button:hover {
+    transform: scale(1.150);
+    transition: transform 200ms;
+}
+
+.authSection button {
+    background-color: transparent;
+}
+
+.headerUser .logout{
+    border: #808080 solid 2px;
+    border-radius: 10px;
+}
+
+.authSection button.active {
+    border-radius: 10px;
+    border: rgba(82, 196, 26, 1) solid 2px;
+}
+
+.active {
+    color: rgba(82, 196, 26, 1);
+}
+
+.headerUser{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.headerUser button.createArticle{
+    height: 30px;
+    padding: 0 10px;
+    line-height: 25px;
+    border-radius: 5px;
+    color: rgba(82, 196, 26, 1);
+    border: rgba(82, 196, 26, 1) solid 2px;
+}
+

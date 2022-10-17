@@ -1,0 +1,40 @@
+.inputLabel{
+    width: 100%;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.inputLabelError{
+    border: red;
+}
+
+.labelName {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #262626;
+}
+
+.inputLabel input, .inputLabel textarea {
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    height: 40px;
+    outline: none;
+    font-size: 16px;
+    padding: 4px 10px;
+}
+
+.inputLabel textarea{
+    height: 170px;
+    resize: none;
+}
+
+.inputLabel .errorInput{
+    border-color: rgba(245, 34, 45, 1)
+}
+
+.labelError{
+   color: rgba(245, 34, 45, 1)
+}
