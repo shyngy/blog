@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Tags.module.css';
-import type { Tag } from '../Article';
+import { Tag } from '../Article/types';
 
 interface TagsProps {
   tags: Tag[];

@@ -67,7 +67,7 @@ const FullPost = () => {
       {post !== null && (
         <Post {...post}>
           <>
-            {user.username && (
+            {user.username === post.author.username && (
               <div className={styles.actions}>
                 <button onClick={() => setOpen(true)} className={styles.deleteButton} type="button">
                   Delete

@@ -1,15 +1,7 @@
 import axios from 'axios';
 import config, { getCookie } from './config';
-import { UserState } from '../store/userSlice';
-
-interface SignUpUser {
-  username: string;
-  email: string;
-  password: string;
-  image?: string;
-}
-
-type SignInUser = Omit<SignUpUser, 'username'>;
+import { UserState } from '../store/types';
+import { SignInUser, SignUpUser } from './types';
 
 export function signUp(user: SignUpUser) {
   return axios

@@ -21,3 +21,12 @@ export interface ResponsePostData {
   articles: Article[];
   articlesCount: number;
 }
+
+export interface SignUpUser {
+  username: string;
+  email: string;
+  password: string;
+  image?: string;
+}
+
+export type SignInUser = Omit<SignUpUser, 'username'>;

@@ -6,25 +6,7 @@ import styles from './Article.module.css';
 import LabelInput from '../LabelInput';
 import Tags from '../Tags';
 import { editArticle, getPostBySlug, newArticle } from '../../api/post';
-
-export interface ArticleData {
-  title: string;
-  description: string;
-  body: string;
-}
-
-export interface FullArticleData extends ArticleData {
-  tagList: string[];
-}
-
-export interface Tag {
-  value: string;
-  id: string;
-}
-
-interface ArticleProps {
-  articleTitle: string;
-}
+import { ArticleProps, Tag, ArticleData } from './types';
 
 const Article: React.FC<ArticleProps> = ({ articleTitle }) => {
   const navigate = useNavigate();

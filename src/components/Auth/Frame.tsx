@@ -4,12 +4,7 @@ import { useForm } from 'react-hook-form';
 import styles from './Frame.module.css';
 import { useAppDispatch } from '../../store/hooks';
 import { setUserData } from '../../store/userSlice';
-import { FrameComponentProps, FrameFieldValues } from './types';
-
-interface FrameProps {
-  title: string;
-  Component: React.FC<FrameComponentProps>;
-}
+import { FrameFieldValues, FrameProps } from './types';
 
 const Frame: React.FC<FrameProps> = ({ title, Component }) => {
   const navigate = useNavigate();

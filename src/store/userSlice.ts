@@ -1,12 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from './index';
-
-export interface UserState {
-  image: string;
-  username: string;
-  email: string;
-}
+import type { UserState } from './types';
 
 const initialState: UserState = {
   image: '',

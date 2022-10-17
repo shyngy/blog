@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'react-router-dom';
 import styles from './Post.module.css';
 import Avatar from '../Avatar';
@@ -37,6 +38,7 @@ const Post: React.FC<PostProps> = ({
       });
     }
   };
+  const tagComponent = (tag: Tag) => tag && tag !== ' ' && <span key={uuidv4()}>{tag}</span>;
   const body = (
     <>
       <header className={styles.header}>
@@ -49,9 +51,7 @@ const Post: React.FC<PostProps> = ({
       <div className={styles.avatarContainer}>
         <Avatar imageUrl={author.image} name={author.username} date={createdAt} />
       </div>
-      <section className={styles.tags}>
-        {tagList && tagList.map((tag) => tag && tag !== ' ' && <span>{tag}</span>)}
-      </section>
+      <section className={styles.tags}>{tagList && tagList.slice(0, 7).map(tagComponent)}</section>
       <p className={styles.description}>{description}</p>
     </>
   );
@@ -68,5 +68,7 @@ const Post: React.FC<PostProps> = ({
     </article>
   );
 };
+
+type Tag = string | null;
 
 export default Post;

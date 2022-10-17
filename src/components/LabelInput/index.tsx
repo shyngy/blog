@@ -2,7 +2,7 @@ import React from 'react';
 import { UseFormRegisterReturn } from 'react-hook-form';
 import styles from './LabelInput.module.css';
 import { FrameFieldItems } from '../Auth/types';
-import type { ArticleData } from '../Article';
+import type { ArticleData } from '../Article/types';
 
 interface LabelInputProps {
   register: UseFormRegisterReturn<FrameFieldItems | keyof ArticleData>;

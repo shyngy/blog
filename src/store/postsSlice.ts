@@ -3,13 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from '.';
 import { Article } from '../api/types';
 import postApi from '../api/post';
-
-interface PostsState {
-  items: Article[];
-  articlesCount: number;
-  currentPage: number;
-  fullPostItem: Article | null;
-}
+import { PostsState } from './types';
 
 const initialState: PostsState = {
   items: [],

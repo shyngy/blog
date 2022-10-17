@@ -1,7 +1,7 @@
 import axios from 'axios';
 import config, { getCookie } from './config';
 import { Article, ResponsePostData } from './types';
-import type { FullArticleData } from '../components/Article';
+import type { FullArticleData } from '../components/Article/types';
 
 const header = () => ({ headers: { authorization: `Bearer ${getCookie('token')}` } });
 
