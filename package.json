@@ -13,6 +13,8 @@
     "@types/react-dom": "^18.0.6",
     "antd": "^4.23.5",
     "axios": "^1.1.2",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "lodash": "^4.17.21",
     "lodash.debounce": "^4.0.8",
     "react": "^18.2.0",
@@ -41,9 +43,8 @@
     "eslint-plugin-promise": "^6.0.1",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "husky": "^8.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -55,20 +56,15 @@
     "lint:fix": "eslint ./src --fix",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{ts,tsx}": "npm run lint:fix",
-    "src/*": "prettier --config ./prettierrc.json --write ."
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
+  },
+  "lint-staged": {
+    "src/**/*.{tsx,ts,html.css}": "prettier --write",
+    "src/**/*.{ts,tsx}": "eslint"
   },
   "browserslist": {
     "production": [
