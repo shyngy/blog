@@ -1,1 +1,1 @@
-https://blog-14rzvlvgq-shyngy.vercel.app/
+https://blog-shyngy.vercel.app
